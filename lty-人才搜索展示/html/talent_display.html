@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <title>搜索展示界面</title>
+  <link rel="stylesheet" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" href="../res/static/css/index.css">
+</head>
+<body>
+  <!-- nav部分 -->
+  <div class="nav">
+    <div class="layui-container">
+      <!-- 公司logo -->
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="../res/static/img/logo2019.png" alt="天津大学" height="40">
+        </a>
+      </div>
+      <div class="nav-list">
+        <button>
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="layui-nav" lay-filter="">
+          <li class="layui-nav-item"><a href="index.html">首页</a></li>
+          <li class="layui-nav-item layui-this"><a href="#">人才搜索</a></li>
+          <li class="layui-nav-item"><a href="#">热点分析</a></li>
+          <li class="layui-nav-item"><a href="#">行业分析</a></li>
+          <li class="layui-nav-item"><a href="#">关于我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- 人才标签筛选 -->
+  <div class="fliter">
+    <div class="layui-container">
+      <div class="fliter-block">
+        <div class="fliter-scope fliter-shengfen">
+          <div class="scope-title">省份地区</div>
+          <div class="scope-box">
+            <a class="scope-item" href="#">北京市</a>
+            <a class="scope-item" href="#">上海市</a>
+            <a class="scope-item" href="#">天津市</a>
+            <a class="scope-item" href="#">重庆市</a>
+            <a class="scope-item" href="#">河北省</a>
+            <a class="scope-item" href="#">山西省</a>
+            <a class="scope-item" href="#">内蒙古自治区</a>
+            <a class="scope-item" href="#">辽宁省</a>
+            <a class="scope-item" href="#">吉林省</a>
+            <a class="scope-item" href="#">黑龙江省</a>
+            <a class="scope-item" href="#">江苏省</a>
+            <a class="scope-item" href="#">浙江省</a>
+            <a class="scope-item" href="#">安徽省</a>
+            <a class="scope-item" href="#">福建省</a>
+            <a class="scope-item" href="#">江西省</a>
+            <a class="scope-item" href="#">山东省</a>
+            <a class="scope-item" href="#">河南省</a>
+            <a class="scope-item" href="#">湖北省</a>
+            <a class="scope-item" href="#">湖南省</a>
+            <a class="scope-item" href="#">广东省</a>
+            <a class="scope-item" href="#">广西壮族自治区</a>
+            <a class="scope-item" href="#">四川省</a>
+            <a class="scope-item" href="#">贵州省</a>
+            <a class="scope-item" href="#">云南省</a>
+            <a class="scope-item" href="#">海南省</a>
+            <a class="scope-item" href="#">陕西省</a>
+            <a class="scope-item" href="#">甘肃省</a>
+            <a class="scope-item" href="#">宁夏回族自治区</a>
+            <a class="scope-item" href="#">青海省</a>
+            <a class="scope-item" href="#">新疆维吾尔自治区</a>
+            <a class="scope-item" href="#">西藏自治区</a>
+            <a class="scope-item" href="#">香港特别行政区</a>
+            <a class="scope-item" href="#">澳门特别行政区</a>
+            <a class="scope-item" href="#">台湾省</a>
+          </div>
+        </div>
+        <div class="fliter-scope fliter-hangye">
+          <div class="scope-title">行业分类</div>
+          <div class="scope-box">
+            <a class="scope-item" href="#">农、林、牧、副、渔业</a>
+            <a class="scope-item" href="#">采矿业</a>
+            <a class="scope-item" href="#">制造业</a>
+            <a class="scope-item" href="#">电力、热力、燃气及水生产和供应业</a>
+            <a class="scope-item" href="#">建筑业</a>
+            <a class="scope-item" href="#">批发和零售业</a>
+            <a class="scope-item" href="#">交通运输、仓储和邮政业</a>
+            <a class="scope-item" href="#">住宿和餐饮业</a>
+            <a class="scope-item" href="#">信息传输、软件和信息技术服务业</a>
+            <a class="scope-item" href="#">金融业</a>
+            <a class="scope-item" href="#">房地产业</a>
+            <a class="scope-item" href="#">租赁和商务服务业</a>
+            <a class="scope-item" href="#">科学研究和技术服务业</a>
+            <a class="scope-item" href="#">水利、环境和公共设施管理业</a>
+            <a class="scope-item" href="#">居民服务、修理和其他服务业</a>
+            <a class="scope-item" href="#">教育</a>
+            <a class="scope-item" href="#">卫生和社会工作</a>
+            <a class="scope-item" href="#">文化、体育和娱乐业</a>
+            <a class="scope-item" href="#">公共管理、社会保障和社会组织</a>
+            <a class="scope-item" href="#">国际组织</a>
+          </div>
+        </div>
+        <div class="fliter-scope fliter-xueli">
+          <div class="scope-title">学历</div>
+          <div class="scope-box">
+            <a class="scope-item" href="#">专科以下</a>
+            <a class="scope-item" href="#">专科</a>
+            <a class="scope-item" href="#">本科</a>
+            <a class="scope-item" href="#">硕士</a>
+            <a class="scope-item" href="#">博士</a>
+          </div>
+        </div>
+        <div class="fliter-scope fliter-gongzuo">
+          <div class="scope-title">工作经历</div>
+          <div class="scope-box">
+            <a class="scope-item" href="#">无</a>
+            <a class="scope-item" href="#">1年以下</a>
+            <a class="scope-item" href="#">1-3年</a>
+            <a class="scope-item" href="#">3-5年</a>
+            <a class="scope-item" href="#">5-10年</a>
+            <a class="scope-item" href="#">10年以上</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 人才搜索展示 -->
+<div class="result">
+  <div class="layui-container">
+    <div class="result-number">为您找到 100 条结果</div>
+    <div class="result-main">
+
+      <!-- 人才展示区 -->
+      <!-- 第一行 -->
+      <div class="person-space">
+        <div class="person-block">
+          <div class="identity">
+            <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+            <div class="identity-right">
+              <div class="name">张三</div>
+              <div class="job">天津大学XX学院教授</div>
+              <div class="location">天津市 津南区</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="field-title">研究领域：</div>
+            <div class="field-item">生命科学</div>
+            <div class="field-item">软件工程</div>
+            <div class="field-item">人工智能</div>
+          </div>
+
+          <div class="cooperator">
+            <div class="cooperator-title">合作伙伴：</div>
+            <div class="cooperator-area">
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">李四</div>
+                  </div>
+                  <div class="job">天津大学XX学院教授</div>
+                </div>
+              </div>
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">王五</div>
+                  </div>
+                  <div class="job">天津大学XX学院副教授</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="person-space">
+        <div class="person-block">
+          <div class="identity">
+            <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+            <div class="identity-right">
+              <div class="name">张三</div>
+              <div class="job">天津大学XX学院教授</div>
+              <div class="location">天津市 津南区</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="field-title">研究领域：</div>
+            <div class="field-item">生命科学</div>
+            <div class="field-item">软件工程</div>
+            <div class="field-item">人工智能</div>
+          </div>
+
+          <div class="cooperator">
+            <div class="cooperator-title">合作伙伴：</div>
+            <div class="cooperator-area">
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">李四</div>
+                  </div>
+                  <div class="job">天津大学XX学院教授</div>
+                </div>
+              </div>
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">王五</div>
+                  </div>
+                  <div class="job">天津大学XX学院副教授</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="person-space">
+        <div class="person-block">
+          <div class="identity">
+            <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+            <div class="identity-right">
+              <div class="name">张三</div>
+              <div class="job">天津大学XX学院教授</div>
+              <div class="location">天津市 津南区</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="field-title">研究领域：</div>
+            <div class="field-item">生命科学</div>
+            <div class="field-item">软件工程</div>
+            <div class="field-item">人工智能</div>
+          </div>
+
+          <div class="cooperator">
+            <div class="cooperator-title">合作伙伴：</div>
+            <div class="cooperator-area">
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">李四</div>
+                  </div>
+                  <div class="job">天津大学XX学院教授</div>
+                </div>
+              </div>
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">王五</div>
+                  </div>
+                  <div class="job">天津大学XX学院副教授</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第二行 -->
+      <div class="person-space">
+        <div class="person-block">
+          <div class="identity">
+            <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+            <div class="identity-right">
+              <div class="name">张三</div>
+              <div class="job">天津大学XX学院教授</div>
+              <div class="location">天津市 津南区</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="field-title">研究领域：</div>
+            <div class="field-item">生命科学</div>
+            <div class="field-item">软件工程</div>
+            <div class="field-item">人工智能</div>
+          </div>
+
+          <div class="cooperator">
+            <div class="cooperator-title">合作伙伴：</div>
+            <div class="cooperator-area">
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">李四</div>
+                  </div>
+                  <div class="job">天津大学XX学院教授</div>
+                </div>
+              </div>
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">王五</div>
+                  </div>
+                  <div class="job">天津大学XX学院副教授</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="person-space">
+        <div class="person-block">
+          <div class="identity">
+            <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+            <div class="identity-right">
+              <div class="name">张三</div>
+              <div class="job">天津大学XX学院教授</div>
+              <div class="location">天津市 津南区</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="field-title">研究领域：</div>
+            <div class="field-item">生命科学</div>
+            <div class="field-item">软件工程</div>
+            <div class="field-item">人工智能</div>
+          </div>
+
+          <div class="cooperator">
+            <div class="cooperator-title">合作伙伴：</div>
+            <div class="cooperator-area">
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">李四</div>
+                  </div>
+                  <div class="job">天津大学XX学院教授</div>
+                </div>
+              </div>
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">王五</div>
+                  </div>
+                  <div class="job">天津大学XX学院副教授</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="person-space">
+        <div class="person-block">
+          <div class="identity">
+            <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+            <div class="identity-right">
+              <div class="name">张三</div>
+              <div class="job">天津大学XX学院教授</div>
+              <div class="location">天津市 津南区</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="field-title">研究领域：</div>
+            <div class="field-item">生命科学</div>
+            <div class="field-item">软件工程</div>
+            <div class="field-item">人工智能</div>
+          </div>
+
+          <div class="cooperator">
+            <div class="cooperator-title">合作伙伴：</div>
+            <div class="cooperator-area">
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">李四</div>
+                  </div>
+                  <div class="job">天津大学XX学院教授</div>
+                </div>
+              </div>
+              <div class="cooperator-space">
+                <div class="cooperator-block">
+                  <div class="identity">
+                    <div class="avatar"><img src="../res/static/img/news_img1.jpg"></div>
+                    <div class="name">王五</div>
+                  </div>
+                  <div class="job">天津大学XX学院副教授</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 导航页码 -->
+<div class="page">
+  <div class="layui-container">
+    <div class="page-area">
+      <ul class="page-blocks">
+        <li><a class="prev" href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a class="active" href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+        <li><a href="#">10</a></li>
+        <li><a class="final-page" href="#">...20</a></li>
+        <li><a class="next" href="#">&raquo;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <!-- footer部分 -->
+  <div class="footer">
+    <div class="layui-container">
+      <p class="footer-web">
+        <a href="javascript:;">合作伙伴</a>
+        <a href="javascript:;">企业画报</a>
+        <a href="javascript:;">JS网</a>
+        <a href="javascript:;">千图网</a>
+        <a href="javascript:;">昵图网</a>
+        <a href="javascript:;">素材网</a>
+        <a href="javascript:;">花瓣网</a>
+      </p>
+      <div class="layui-row footer-contact">
+        <div class="layui-col-sm2 layui-col-lg1"><img src="../res/static/img/erweima.jpg"></div>
+        <div class="layui-col-sm10 layui-col-lg11">
+          <div class="layui-row">
+            <div class="layui-col-sm6 layui-col-md8 layui-col-lg9">
+              <p class="contact-top"><i class="layui-icon layui-icon-cellphone"></i>&nbsp;400-8888888&nbsp;&nbsp;&nbsp;(9:00-18:00)</p>
+              <p class="contact-bottom"><i class="layui-icon layui-icon-home"></i>&nbsp;88888888@163.com</span></p>
+            </div>
+            <div class="layui-col-sm6 layui-col-md4 layui-col-lg3">
+              <p class="contact-top"><span class="right">该模板版权归 <a href="https://www.layui.com/" target="_blank">layui.com</a> 所有</span></p>
+              <p class="contact-bottom"><span class="right">Copyright&nbsp;©&nbsp;2016-2018&nbsp;&nbsp;ICP&nbsp;备888888号</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="../res/layui/layui.js"></script>
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!--
+<script>
+  layui.config({
+    base: '../res/static/js/' 
+  }).use('firm'); 
+</script>
+-->
+
+</body>
+</html>
